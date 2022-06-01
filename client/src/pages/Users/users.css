@@ -1,0 +1,34 @@
+.page_wrapper {
+    width: 100%;
+}
+
+.users-topbar {
+    padding:40px 0;
+    text-align: center;
+}
+.users-topbar h1{
+    font-family: 'Barlow', sans-serif;
+}
+
+.users-page_body{
+    padding: 20px 50px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+.users-table table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.users-table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.users-table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+

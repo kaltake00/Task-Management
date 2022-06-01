@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+
+.cta-primary-btn{
+  width: auto;
+  min-width: 120px;
+  height: 30px;
+  background: transparent;
+  border: 3px solid #000;
+  border-radius: 20px;
+  position:relative;
+  margin-right: 20px;
+}
+.cta-primary-btn::after{
+  width: 103%;
+  height: 30px;
+  background: lightblue;
+  display: block;
+  border-radius: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content:"";
+  z-index: -1;
+}
+
+

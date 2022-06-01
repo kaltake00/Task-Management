@@ -1,0 +1,64 @@
+h1, h2, h3, p {
+    margin: 0 !important;
+}
+
+.header-wrapper .header-container a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.header-logo {
+    height: 48px;
+    width: 48px;
+}
+.header-wrapper .logo-container .logo-text{
+    font-weight: 700;
+}
+
+.header-wrapper .login-reg-btns{
+    z-index: 0;
+}
+
+
+.header-wrapper .signup-btn::after {
+    background: #FCDE7C;
+}
+
+.main-banner {
+    /* background-image: url('../../../public/images/hero-bg.jpg'), linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);*/
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1), rgba(0, 172, 193, 0.4)), url('../../../public/images/hero-bg.jpg');
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    height: 90vh;
+}
+
+.main-banner .container {
+    height: 100%;
+}
+
+.main-banner .buttons-wrapper {
+    z-index: 2;
+}
+.main-banner .landing-main-btn{
+    min-width: 180px;
+    height: 45px;
+}
+.main-banner .landing-main-btn::after{
+    background: #fff;
+    height: 45px;
+}
+
+.waves-wrapper {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    z-index: 0;
+}
+
+.first-landing-section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+}

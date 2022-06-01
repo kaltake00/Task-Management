@@ -1,0 +1,46 @@
+.page_wrapper {
+    width: 100%;
+}
+
+.tasks-topbar {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.tasks-topbar h1 {
+    font-family: 'Barlow', sans-serif;
+}
+
+.tasks-page_body {
+    padding: 20px 50px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.tasks-table table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tasks-table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.tasks-table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr .row-actions {
+    display: flex;
+    flex-direction: row;
+}
+
+tr .nowrap-column {
+    white-space: nowrap;
+}
+td.description-column {
+    width: 33%;
+}

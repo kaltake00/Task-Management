@@ -1,0 +1,14 @@
+.row-actions .customer-delete{
+    margin-right: 8px;
+    background-color: red;
+    border-radius: 100%;
+    border: none;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+.row-actions .customer-delete svg{
+    color: #fff;
+    vertical-align: middle;
+}
