@@ -9,6 +9,10 @@
 .customers-topbar h1{
     font-family: 'Barlow', sans-serif;
 }
+.customers-topbar .add-customerbtn-wrapper{
+    position: relative;
+    z-index: 1;
+}
 
 .search-wrapper {
     display: flex;
@@ -66,6 +70,6 @@
     height: 35px;
     z-index: -1;
     top: 2px;
-    left: 2px;
+    left: 4px;
     border-radius: 20px;
 }

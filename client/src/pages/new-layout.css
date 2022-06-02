@@ -47,7 +47,37 @@
     position: relative;
     padding-right: 8px;
     padding-left: 20px;
+    float: left;
+    height: 100%;
+    /*overflow: hidden;*/
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content p {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+.dropdown-content p:hover {
+    background-color: #ddd;
+}
+.acc-icon:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    top: 42px;
+    right: 0px;
+}  
+
 .acc-icon .account-icon {
     width: 25px;
     height: 29px;

@@ -10,7 +10,15 @@
 .tasks-topbar h1 {
     font-family: 'Barlow', sans-serif;
 }
-
+.tasks-topbar .add_task_wrapper{
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+.tasks-topbar .add_task_wrapper .add-task-btn::after{
+    top: 2px;
+    left: 4px;
+}
 .tasks-page_body {
     padding: 20px 50px;
     background-color: #fff;

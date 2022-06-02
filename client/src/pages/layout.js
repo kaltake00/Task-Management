@@ -34,6 +34,10 @@ const Layout = ({ auth, userInfo }) => {
               <div className="acc-icon">
                 <FaRegUser className="account-icon" />
                 <FaAngleDown />
+                <div className="dropdown-content">
+                  <p>My Account</p>
+                  <p>Log Out</p>
+                </div>
               </div>
             </div>
           }
