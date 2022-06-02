@@ -2,6 +2,8 @@ import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import './Register.css';
+import {AiOutlineEye} from 'react-icons/ai'
+
 
 export default function Login() {
 
@@ -22,41 +24,32 @@ export default function Login() {
         })
     }
 
-    // const register = async (e) => {
-    //     e.preventDefault()
-
-    //     console.log(name, username, password)
-    // 	try {
-    // 	  await Axios.post('https://customer-relations.herokuapp.com/register', {
-    //         name: name, 
-    //         username: username, 
-    //         password: password,
-    //       });
-    // 	} catch (err) {
-    // 		// Handle Error Here
-    // 		console.error(err);
-    // 	}
-    // };
-
+    const [passwordShown, setPasswordShown] = useState(false);
+    const togglePassword = () =>{
+        setPasswordShown(!passwordShown)
+    }
 
     return (
-        <div className="register-wrapper">
-            <h1>Please register a new account</h1>
+        <div className="register-wrapper login-wrapper">
+            <div className='heading-container'>
+                <h1>Sign Up</h1>
+                <p>Create a new account</p>
+            </div>
 
             <label>
-                <p>Full Name</p>
                 <input
                     type="text"
                     required
+                    placeholder='Full Name'
                     onChange={(e) => {
                         setName(e.target.value)
                     }}
                 />
             </label>
             <label>
-                <p>Email</p>
                 <input
                     type="email"
+                    placeholder='E-mail'
                     required
                     onChange={(e) => {
                         setEmail(e.target.value)
@@ -64,9 +57,9 @@ export default function Login() {
                 />
             </label>
             <label>
-                <p>Username</p>
                 <input
                     type="text"
+                    placeholder='Username'
                     required
                     onChange={(e) => {
                         setUsername(e.target.value)
@@ -74,13 +67,13 @@ export default function Login() {
                 />
             </label>
             <label>
-                <p>Password</p>
-                <input type="password" required onChange={(e) => {
+                <input type={passwordShown ? "text" : "password"} placeholder='Password' required onChange={(e) => {
                     setPassword(e.target.value)
                 }} />
+                <AiOutlineEye onClick={togglePassword}/>
             </label>
-            <div>
-                <button type="submit" onClick={register}>Register</button>
+            <div className='action-btn-container'>
+                <button type="submit" className='action-btn cta-primary-btn' onClick={register}>Register</button>
             </div>
 
             <Link to="/login">Already have an account? Log In</Link>

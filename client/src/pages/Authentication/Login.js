@@ -3,6 +3,7 @@ import { React, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 //import { useEffect } from 'react';
 import './Login.css';
+import {AiOutlineEye} from 'react-icons/ai'
 
 
 
@@ -25,30 +26,32 @@ export default function Login(props) {
             } else {
                 setUserStatus(Response.data.name)
                 props.onLoggingIn(Response.data);
-                navigate('/dashboard');
+                navigate('/dashboard/home');
             }
         })
     }
 
-    
+    const [passwordShown, setPasswordShown] = useState(false);
+    const togglePassword = () =>{
+        setPasswordShown(!passwordShown)
+    }
     return (
         <div className="login-wrapper">
-            <div className='logo-container'>
-            <img src={process.env.PUBLIC_URL + "images/footer-logo.png"} alt="" />
+            <div className='heading-container'>
+                <h1>Login</h1>
+                <p>Connect to your account</p>
             </div>
-            <h1>Please Log In</h1>
             <label>
-                <p>Username</p>
-                <input type="text" onChange={(e) => {setUsername(e.target.value)}}/>
+                <input type="text" placeholder='Username' onChange={(e) => {setUsername(e.target.value)}}/>
             </label>
             <label>
-                <p>Password</p>
-                <input type="password" onChange={(e) => {
+                <input type={passwordShown ? "text" : "password"} placeholder='Password' onChange={(e) => {
                     setPassword(e.target.value)
                 }} />
+                <AiOutlineEye onClick={togglePassword}/>
             </label>
-            <div>
-                <button type="submit" onClick={login}>Submit</button>
+            <div className='action-btn-container'>
+                <button type="submit" className='action-btn cta-primary-btn' onClick={login}>SIGN IN</button>
             </div>
 
             <Link to="/register">Don't have an account ? Sign Up</Link>

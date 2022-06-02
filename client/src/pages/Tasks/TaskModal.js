@@ -112,8 +112,8 @@ function TaskModal(props) {
 						<div className='form-group'>
 							<label>Select User</label>
 							<select value={user_id ?? ""} onChange={userChangeHandler} required>
-								<option value="null" selected>Select your option</option>
-								{users.map(user => <option value={user.id}>ID: {user.id} - {user.name}</option>)}
+								<option value="null" defaultValue>Select your option</option>
+								{users.map(user => <option key={user.id} value={user.id}>ID: {user.id} - {user.name}</option>)}
 							</select>
 						</div>
 						<div className='form-group'>

@@ -7,11 +7,10 @@ import { FaAngleDown, FaRegUser } from 'react-icons/fa';
 import './new-layout.css';
 
 const Layout = ({ auth, userInfo }) => {
-  console.log('Auth Status: ', auth)
   if (!auth) {
     return <Navigate to="/login" replace />;
   }
-  console.log('LOGGED IN USER INFORMATIONS: ', userInfo)
+  console.log('Layout.js user informations: ', userInfo)
   return (
 
     <>
@@ -19,7 +18,9 @@ const Layout = ({ auth, userInfo }) => {
         <div className="header-container">
           <Link to="/">
           <div className="logo-container">
-              <img src={process.env.PUBLIC_URL + "images/footer-logo.png"} alt="" />
+              {/* <img src={process.env.PUBLIC_URL + "/images/footer-logo.png"} alt="" /> */}
+              <img src={`${process.env.PUBLIC_URL}/images/footer-logo.png`} alt="" />
+
               <h1 className="logo-text">CMS</h1>
             </div>
           </Link>
@@ -46,35 +47,35 @@ const Layout = ({ auth, userInfo }) => {
             <NavLink to="/dashboard/home">
               <div className="single-sidebar">
                 {/* <RiDashboardLine className="dashboard-icon" /> */}
-                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "icons/dashboard.png"} alt="" />
+                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "/icons/dashboard.png"} alt="" />
                 <p className="single-sidebar-name">Dashboard</p>
               </div>
             </NavLink>
             <NavLink to="/dashboard/customers" activeclassname="active">
               <div className="single-sidebar">
                 {/* <GrGroup className="dashboard-icon" /> */}
-                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "icons/customers.png"} alt="" />
+                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "/icons/customers.png"} alt="" />
                 <p className="single-sidebar-name">Customers</p>
               </div>
             </NavLink>
             <NavLink to="/dashboard/users" activeclassname="active">
               <div className="single-sidebar">
                 {/* <FaUsers className="dashboard-icon" /> */}
-                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "icons/users.png"} alt="" />
+                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "/icons/users.png"} alt="" />
                 <p className="single-sidebar-name">Users</p>
               </div>
             </NavLink>
             <NavLink to="/dashboard/tasks" activeclassname="active">
               <div className="single-sidebar">
                 {/* <FaUsers className="dashboard-icon" /> */}
-                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "icons/tasks.png"} alt="" />
+                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "/icons/tasks.png"} alt="" />
                 <p className="single-sidebar-name">Tasks</p>
               </div>
             </NavLink>
             <NavLink to="/dashboard/my-tasks" activeclassname="active">
               <div className="single-sidebar">
                 {/* <FaUsers className="dashboard-icon" /> */}
-                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "icons/my-tasks.png"} alt="" />
+                <img className="dashboard-icon" src={process.env.PUBLIC_URL + "/icons/my-tasks.png"} alt="" />
                 <p className="single-sidebar-name">My Tasks</p>
               </div>
             </NavLink>

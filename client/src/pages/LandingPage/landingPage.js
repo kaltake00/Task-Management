@@ -61,7 +61,7 @@ function LandingPage({ userInfo }) {
           <h3>Then You are on a right place!</h3>
 
           <div className='buttons-wrapper mt-5'>
-            <Link to="/dashboard">
+            <Link to="/dashboard/home">
               <button className='landing-main-btn cta-primary-btn'>Go to dashboard</button>
             </Link>
           </div>
