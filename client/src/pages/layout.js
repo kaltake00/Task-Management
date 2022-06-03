@@ -1,10 +1,11 @@
 import { Outlet, NavLink, Navigate, Link } from "react-router-dom";
-import { FaAngleDown, FaRegUser } from 'react-icons/fa';
+//import { FaAngleDown, FaRegUser } from 'react-icons/fa';
 //import { RiDashboardLine } from 'react-icons/ri'
 //import { GrGroup } from 'react-icons/gr'
 
 
 import './new-layout.css';
+import UserInfo from "../UI/Header/UserInfo";
 
 const Layout = ({ auth, userInfo }) => {
   if (!auth) {
@@ -24,7 +25,7 @@ const Layout = ({ auth, userInfo }) => {
               <h1 className="logo-text">CMS</h1>
             </div>
           </Link>
-          {!userInfo
+          {/* {!userInfo
             ? <button>Log In</button>
             : <div className="account-container">
               <div className="acc-info">
@@ -40,6 +41,10 @@ const Layout = ({ auth, userInfo }) => {
                 </div>
               </div>
             </div>
+          } */}
+          {!userInfo
+            ? <button>Log In</button>
+            : <UserInfo userInfo={userInfo} />
           }
 
         </div>

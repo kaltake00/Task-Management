@@ -10,10 +10,13 @@
     padding: 16px 18px;
     background-color: #fff;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6px;
 }
 
 .logo-container{
     display: flex;
+    padding-bottom: 10px;
 }
 .logo-container .logo-text{
     margin: 0;
@@ -24,6 +27,7 @@
     align-content: center;
     align-items: center;
     justify-content: flex-end;
+    padding-bottom: 10px;
 }
 .acc-info {
     text-align: right;
@@ -71,7 +75,7 @@
 .dropdown-content p:hover {
     background-color: #ddd;
 }
-.acc-icon:hover .dropdown-content {
+.account-container:hover .dropdown-content {
     display: block;
     position: absolute;
     top: 42px;

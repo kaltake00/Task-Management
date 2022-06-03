@@ -1,4 +1,6 @@
 import React from 'react'
+import {RiDeleteBin6Line} from 'react-icons/ri';
+import {BsPencil} from 'react-icons/bs';
 
 function TaskTableRow(props) {
 
@@ -29,8 +31,8 @@ function TaskTableRow(props) {
             <td className='nowrap-column'>{task_data.status}</td>
             <td>
                 <div className="row-actions">
-                    <button onClick={editTask}>Edit Task</button>
-                    <button onClick={deleteTask}>Delete Task</button>
+                    <button className='cta-primary-btn' onClick={deleteTask}><RiDeleteBin6Line /></button>
+                    <button className='cta-primary-btn edit' onClick={editTask}><BsPencil /></button>
 
                     {/* <button onClick={deleteCustomer} className='customer-delete'><RiDeleteBin6Line /></button>
                     <button onClick={updateCustomer} className='customer-edit'><BsPencil /></button> */}

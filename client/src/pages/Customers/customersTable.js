@@ -32,8 +32,8 @@ const TableRow = (props) => {
 			<td>{collab}</td>
 			<td>
 				<div className="row-actions">
-					<button onClick={deleteCustomer} className='customer-delete'><RiDeleteBin6Line /></button>
-					<button onClick={updateCustomer} className='customer-edit'><BsPencil /></button>
+					<button onClick={deleteCustomer} className='delete cta-primary-btn' title='Delete Customer'><RiDeleteBin6Line /></button>
+					<button onClick={updateCustomer} className='edit cta-primary-btn'><BsPencil /></button>
 				</div>
 			</td>
 		</tr>

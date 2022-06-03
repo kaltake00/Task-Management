@@ -1,4 +1,5 @@
 import React from 'react'
+import {RiDeleteBin6Line} from 'react-icons/ri';
 
 function UsersTableRow(props) {
     const userdata = props.rowUserData
@@ -17,7 +18,7 @@ function UsersTableRow(props) {
             <td>Task Name no1</td>
             <td>
                 <div className="row-actions">
-                    <button onClick={deleteUser}>Delete User</button>
+                    <button className='cta-primary-btn' onClick={deleteUser}><RiDeleteBin6Line /></button>
                     {/* <button onClick={deleteCustomer} className='customer-delete'><RiDeleteBin6Line /></button>
                     <button onClick={updateCustomer} className='customer-edit'><BsPencil /></button> */}
                 </div>

@@ -32,23 +32,6 @@ function LandingPage({ userInfo }) {
             </div>
           </Link>
 
-          {/* <div className="account-container">
-            <div className="login-reg-btns">
-              <Link to="/login">
-                <button className='login-btn cta-primary-btn'>
-                  Log In
-                  <BiLogIn />
-                </button>
-              </Link>
-              <Link to="/register">
-                <button className='signup-btn cta-primary-btn'>
-                  Sign Up
-                  <FiUserCheck />
-                </button>
-              </Link>
-            </div>
-          </div> */}
-
           {userInfo.length < 1 ? <AuthButtons /> : <UserInfo userInfo={userInfo} />}
         </div>
       </div>
