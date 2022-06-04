@@ -1,0 +1,50 @@
+.dashboard-topbar{
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 35px;
+}
+
+.dashboard-topbar h1{
+    margin-bottom: 15px !important;
+}
+
+.dashboard-page_body .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dashboard-page_body .row .card-column{
+    width: 25%;
+    padding: 20px;
+    height: 100%;
+}
+
+.dashboard-page_body .dashboard-card{
+    background: #fff;
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px;
+}
+
+.dashboard-card .card-icon{
+    max-width: 64px;
+    margin-bottom: 15px;
+}
+
+/* Tablet Query */
+@media only screen and (max-width: 768px){
+    .content{
+        padding: 0 15px;
+    }
+    .dashboard-page_body .row .card-column{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 425px){
+    .dashboard-page_body .row .card-column{
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

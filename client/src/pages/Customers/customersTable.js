@@ -33,7 +33,7 @@ const TableRow = (props) => {
 			<td>
 				<div className="row-actions">
 					<button onClick={deleteCustomer} className='delete cta-primary-btn' title='Delete Customer'><RiDeleteBin6Line /></button>
-					<button onClick={updateCustomer} className='edit cta-primary-btn'><BsPencil /></button>
+					<button onClick={updateCustomer} className='edit cta-primary-btn' title='Edit Customer'><BsPencil /></button>
 				</div>
 			</td>
 		</tr>

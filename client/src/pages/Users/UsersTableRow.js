@@ -18,7 +18,7 @@ function UsersTableRow(props) {
             <td>Task Name no1</td>
             <td>
                 <div className="row-actions">
-                    <button className='cta-primary-btn' onClick={deleteUser}><RiDeleteBin6Line /></button>
+                    <button className='cta-primary-btn' onClick={deleteUser} title='Delete User'><RiDeleteBin6Line /></button>
                     {/* <button onClick={deleteCustomer} className='customer-delete'><RiDeleteBin6Line /></button>
                     <button onClick={updateCustomer} className='customer-edit'><BsPencil /></button> */}
                 </div>

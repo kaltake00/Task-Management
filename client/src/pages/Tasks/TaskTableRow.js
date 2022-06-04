@@ -31,8 +31,8 @@ function TaskTableRow(props) {
             <td className='nowrap-column'>{task_data.status}</td>
             <td>
                 <div className="row-actions">
-                    <button className='cta-primary-btn' onClick={deleteTask}><RiDeleteBin6Line /></button>
-                    <button className='cta-primary-btn edit' onClick={editTask}><BsPencil /></button>
+                    <button className='cta-primary-btn' onClick={deleteTask} title='Delete Task'><RiDeleteBin6Line /></button>
+                    <button className='cta-primary-btn edit' onClick={editTask} title='Edit Task'><BsPencil /></button>
 
                     {/* <button onClick={deleteCustomer} className='customer-delete'><RiDeleteBin6Line /></button>
                     <button onClick={updateCustomer} className='customer-edit'><BsPencil /></button> */}
