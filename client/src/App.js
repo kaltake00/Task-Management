@@ -1,7 +1,8 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Axios from 'axios';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
 
 import Layout from './pages/layout';
 import Home from './pages/Dashboard/home';
@@ -13,11 +14,9 @@ import Register from "./pages/Authentication/Register";
 import LandingPage from "./pages/LandingPage/landingPage";
 import Tasks from "./pages/Tasks/Tasks"
 import MyTasks from "./pages/MyTasks/MyTasks";
+import Account from "./pages/MyAccount/account";
+
 import './App.css';
-
-
-
-import { useState } from "react";
 
 
 
@@ -64,6 +63,7 @@ function App() {
             <Route path="users" element={<Users />} />
             <Route path="tasks" element={<Tasks />} />
             <Route path="my-tasks" element={<MyTasks user={userData}/>} />
+            <Route path="my-account" element={<Account user={userData}/>} />
           </Route>
           <Route path="/login" element={<Login onLoggingIn={loguj} auth={loginStatus} />} />
           <Route path="/register" element={<Register />} />

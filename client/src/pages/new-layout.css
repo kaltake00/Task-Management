@@ -59,6 +59,7 @@
     height: 100%;
     /*overflow: hidden;*/
 }
+/* ACCOUNT DROPDOWN */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -67,7 +68,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.dropdown-content p {
+.dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -76,7 +77,7 @@
     text-align: left;
   }
   
-.dropdown-content p:hover {
+.dropdown-content a:hover {
     background-color: #ddd;
 }
 .account-container:hover .dropdown-content {

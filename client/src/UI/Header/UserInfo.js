@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { FaAngleDown, FaRegUser } from 'react-icons/fa';
 
 
@@ -13,8 +14,8 @@ function UserInfo({ userInfo }) {
                 <FaRegUser className="account-icon" />
                 <FaAngleDown />
                 <div className="dropdown-content">
-                    <p>My Account</p>
-                    <p>Log Out</p>
+                    <Link to="/dashboard/my-account" className='dropdown-link'>My Account</Link>
+                    <Link to="/" className='dropdown-link'>Log Out</Link>
                 </div>
             </div>
         </div>

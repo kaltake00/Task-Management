@@ -1,4 +1,6 @@
 import './home.css'
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
     return (
@@ -12,32 +14,39 @@ const Home = () => {
             <div className='dashboard-page_body'>
                 <div className='row'>
                     <div className='card-column'>
-                        <div className='dashboard-card'>
+                        <Link to="/dashboard/customers" className='dashboard-card'>
                             <img className="card-icon" src={process.env.PUBLIC_URL + "/icons/customers.png"} alt="" />
                             <h2 className='card-title'>Customers</h2>
                             <p className='card-text'>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
+                        </Link>
                     </div>
                     <div className='card-column'>
-                        <div className='dashboard-card'>
+                        <Link to="/dashboard/users" className='dashboard-card'>
                             <img className="card-icon" src={process.env.PUBLIC_URL + "/icons/users.png"} alt="" />
                             <h2 className='card-title'>Users</h2>
                             <p className='card-text'>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
+                        </Link>
                     </div>
                     <div className='card-column'>
-                        <div className='dashboard-card'>
+                        <Link to="/dashboard/tasks" className='dashboard-card'>
                             <img className="card-icon" src={process.env.PUBLIC_URL + "/icons/tasks.png"} alt="" />
                             <h2 className='card-title'>All Tasks</h2>
                             <p className='card-text'>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
+                        </Link>
                     </div>
                     <div className='card-column'>
-                        <div className='dashboard-card'>
+                        <Link to="/dashboard/my-tasks" className='dashboard-card'>
                             <img className="card-icon" src={process.env.PUBLIC_URL + "/icons/tasks.png"} alt="" />
                             <h2 className='card-title'>My Tasks</h2>
                             <p className='card-text'>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
+                        </Link>
+                    </div>
+                    <div className='card-column'>
+                        <Link to="/dashboard/my-account" className='dashboard-card'>
+                            <img className="card-icon" src={process.env.PUBLIC_URL + "/icons/my-account.png"} alt="" />
+                            <h2 className='card-title'>Account Settings</h2>
+                            <p className='card-text'>Lorem Ipsum Dolor Sit Amet</p>
+                        </Link>
                     </div>
                 </div>
             </div>
