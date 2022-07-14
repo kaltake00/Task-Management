@@ -69,4 +69,5 @@ const updateTaskById = (req, res) => {
         })
 };
 
+
 module.exports = {getAllTasks, getTasksByUserId, deleteTaskById, createTask, updateTaskById}

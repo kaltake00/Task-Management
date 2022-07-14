@@ -52,3 +52,15 @@ tr .nowrap-column {
 td.description-column {
     width: 33%;
 }
+
+.view_task--btn{
+    width: auto;
+    height: auto !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.view_task--btn svg {
+    width: 24px;
+    height: 24px;
+}

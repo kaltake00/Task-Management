@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import './Register.css';
 import {AiOutlineEye} from 'react-icons/ai'
@@ -7,6 +7,7 @@ import {AiOutlineEye} from 'react-icons/ai'
 
 export default function Login() {
 
+    const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
@@ -21,6 +22,8 @@ export default function Login() {
             email: email
         }).then((Response) => {
             console.log(Response)
+            navigate('/login');
+            console.log('redirecting to login page...')
         })
     }
 

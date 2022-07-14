@@ -1,0 +1,122 @@
+.taskDetails-card{
+    background: #fff;
+    z-index: 11;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    width: 40%;
+    text-align: center;
+}
+
+.taskDetails-title--wrapper{
+    background-color: #1097EC;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 15px 25px;
+}
+.taskDetails-title{
+    color: #fff;
+    position: relative;
+    font-size: 24px;
+}
+.taskDetails-title span{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+.taskDetails-card-body{
+    display:flex;
+    padding: 5px 25px;
+    padding-bottom: 35px;
+}
+.taskDetails-main{
+    width: 100%;
+}
+.taskDetails-sidebar{
+    min-width:25%;
+}
+.taskDetails-informations--wraper{
+    height: 100%;
+}
+
+.taskDetails-description--wrapper{
+    background-color: #edeff1;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.taskDetails-description--wrapper h4{
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.taskDetails-informations--wraper h4{
+    margin-bottom: 10px;
+}
+.taskDetails-comments--wrapper h4 {
+    margin-bottom: 10px;
+}
+.taskDetails-informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.taskDetails-informations .column{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.taskDetails-comments--wrapper .comments-container{
+    overflow-y: scroll;
+    max-height: 95px;
+}
+.taskDetails-comments--wrapper .comment-text{
+    margin-left: 5px;
+}
+.taskDetails-comments--wrapper{
+    background-color: #edeff1;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.taskDetails-comments--wrapper h4{
+    margin-top: 0px;
+}
+
+.taskDetails-comments--wrapper .comment-form{
+    margin-top: 20px;
+}
+
+.comment-form .comment-input{
+    border-radius: 7px;
+    height: 28px;
+    font-size: 14px;
+    min-width: 300px;
+    padding-right: 35px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.comment-form button{
+    margin-left: -30px;
+    background: none;
+    /* outline: none; */
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.comment-form button svg{
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 22px;
+}

@@ -11,6 +11,7 @@ const filestore = require('session-file-store')(session)
 const customer_api = require('./queries/customers');
 const user_api = require('./queries/users');
 const tasks_api = require('./queries/tasks');
+const comments_api = require('./queries/comments')
 
 // app.use(cors({
 //     origin: ['https://customer-relations.netlify.app', 'http://localhost:3000'],
@@ -50,8 +51,10 @@ app.post('/register', (req, res) => {
         (err, result) => {
             if (err) {
                 console.log(err)
+                res.send({ err: err })
             } else {
                 console.log('successfully inserted 1 record in users table')
+                res.send({ message: "Succesfully inserted 1 record in users table" })
             }
         })
 })
@@ -102,6 +105,11 @@ app.get('/tasks', tasks_api.getAllTasks);
 app.get('/tasks/:id', tasks_api.getTasksByUserId);
 app.delete('/tasks/delete/:id', tasks_api.deleteTaskById);
 app.put('/tasks/edit/:id', tasks_api.updateTaskById);
+
+// TASKS Comments
+
+app.post('/tasks/comments/create', comments_api.createComment);
+app.get('/tasks/comments/:taskid', comments_api.getAllCommentsByTaskID)
 
 // Running the App
 app.listen(process.env.PORT || 3001, () => {

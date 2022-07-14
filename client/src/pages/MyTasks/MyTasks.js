@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Axios from "axios";
 
 import TaskTableRow from '../Tasks/TaskTableRow';
+import TaskDetails from './TaskDetails';
 //import TasksContext from "../../Context/TasksContext"
 
 function MyTasks(props) {
@@ -10,6 +11,9 @@ function MyTasks(props) {
     console.log('MyTasks User info',user_informations)
 
 	const [tasks, setTasksList] = useState([]);
+	const [isInspectingTask, setInspectingTask] = useState(false)
+	const [inspectedTaskData, setInspectedTaskData] = useState({})
+
     async function fetchTasks() {  //read
 		const { data } = await Axios.get(`http://localhost:3001/tasks/${user_informations.id}`);
 		setTasksList(data);
@@ -19,9 +23,18 @@ function MyTasks(props) {
 		fetchTasks();
 	}, [])
     console.log('MyTasks component - tasks - ', tasks)
+
+	const openTask = (task) =>{
+		console.log('opening task modal ...', task)
+		setInspectingTask(true)
+		setInspectedTaskData(task)
+	}
+	const closeTask = () => setInspectingTask(false)
     ////////////////////////
     return (
         <div className="page_wrapper">
+			{isInspectingTask && <TaskDetails onCloseTask={closeTask} task_data = {inspectedTaskData} user={props.user.id}/>}
+
             <div className="tasks-topbar">
                 <h1>MY TASKS - {user_informations.name}</h1>
                 <p className='customer-hint'>Hi there. There are all created tasks that belong to you. You can easily see all details about every task that is given to you</p>
@@ -44,7 +57,7 @@ function MyTasks(props) {
 							</tr>
 						</thead>
 						<tbody>
-							{tasks.map(row => <TaskTableRow rowData={row} key={row.id} forMyTasks={true} />)}
+							{tasks.map(row => <TaskTableRow rowData={row} key={row.id} forMyTasks={true} onInspectTask={openTask} />)}
 						</tbody>
 					</table>
 				</div>
