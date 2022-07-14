@@ -6,12 +6,15 @@ There are also users or employees who work for a particular company, and the own
 ## About technologies
 
 ***The technologies I used are:***
-MySQL - as a database for storing all data used by the application.
-Express.js - Framework for Node.js
-React.js - for the frontend part of the application along with its third party libraries.
+
+MySQL - as a database for storing all data used by the application.<br>
+Express.js - Framework for Node.js<br>
+React.js - for the frontend part of the application along with its third party libraries.<br>
 Node.js - For the backend part of the application together with libraries like (Session, Cookies, MySQL, Cors, etc.)
 
 ## Short 
 I worked on this project so that I could present to future employers my knowledge and skills I have gained through my previous work experience and show my way of thinking and my approach to problem solving.
 
+## Screenshots
 
+A list of screenshots You can see at : https://postimg.cc/gallery/sM3wrXW
